@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="e">
+<html lang="en">
 <head>
   
     <meta charset="UTF-8">
@@ -12,24 +12,37 @@
 </head>
 <body><div class="body2">
     <div class="container mt-3">
+
     <h2 class="head mb-3">BIO DATA</h2>
-        <form action="" id="form"  >
-            <div ><span class="head2  "  >Contact Information:</span>
+
+    <form action="" id="form"  >
+
+      <div >
+        <span class="head2">Contact Information:</span>
               <ol>  
              <div class="row mt-3">
+          
               <div class="col-sm-6"> 
-             <li > 
-                 <div class="form-floating   mb-2 ">
-                    <input type="text" class="form-control " id="fullname" placeholder="Enter Name" name="fullname" required="">
-                    <label for="fullname">Full Name</label>
+          
+                <li > 
+          
+                  <div class="form-floating    mb-2 ">
+          
+                    <input type="text" class="form-control form-control-focus" id="fullname" placeholder="Enter Name" name="name"  >
+          
+                    <label for="name">Full Name</label>
+          
                     <div class="error"></div>
+          
                   </div> 
                   
                 </li>
                 </div>   
                   <div class="col-sm-6">
-                <li>  <div class="form-floating  mb-2 ">
-                    <input type="text" class="form-control " id="phonenumber" placeholder="Enter Phone number" name="Phone number" required>
+          
+                    <li>
+                        <div class="form-floating  mb-2 ">
+                    <input type="text" class="form-control form-control-focus" id="phonenumber" placeholder="Enter Phone number" name="Phone number" >
                     <label for="phonenumber">Phone Number</label>
                     <div class="error"></div> </div>
                 </li>
@@ -38,18 +51,24 @@
                 <div class="row">
                   <div class="col-sm-6"> 
                 <li>  <div class="form-floating mb-2">
-                    <input type="text" class="form-control " id="email" placeholder="Enter email" name="email" required>
+                    <input type="email" class="form-control form-control-focus" id="email" placeholder="Enter email" name="email" >
                     <label for="email">Email</label>
                     <div class="error"></div>
-                  </div></li>
-                 </div>  <div class="col-sm-6"> 
-              <li>   <div class="form-floating mb-2 ">
-                    <input type="url" class="form-control " id="link" placeholder="Enter Link" name="link" required>
+                  </div>
+                </li>
+                 </div>
+                   <div class="col-sm-6"> 
+              <li>
+                   <div class="form-floating mb-2 ">
+                    <input type="url" class="form-control form-control-focus" id="link" placeholder="Enter Link" name="link" >
                     <label for="link">LinkedIn Profile</label>
                     <div class="error"></div>
-                  </div></li></div></div>
+                  </div>
+                </li>
+              </div>
+            </div>
                   <li> <div class="form-floating mb-4">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: px" required></textarea>
+                    <textarea class="form-control form-control-focus" placeholder="Leave a comment here" id="floatingTextarea2" style="height: px" ></textarea>
                     <label for="floatingTextarea2">Address</label>
                     <div class="error"></div>
                   </div></li> </ol>
@@ -58,40 +77,43 @@
                  <ol>  <li>  <div class="row">
                  <div class="col">
                  <div class="form-floating mt-3 mb-2  ">
-                  <input type="text" class="form-control " id="firstname" placeholder="Enter Name" name="Firstname" required>
+                  <input type="text" class="form-control form-control-focus" id="firstname" placeholder="Enter Name" name="Firstname" >
                   <label for="Firstname">First Name</label>
                   <div class="error"></div>
                    </div>
                    </div>
                    <div class="col">
                   <div class="form-floating mt-3 mb-2 ">
-                  <input type="text" class="form-control " id="name" placeholder="Enter Name" name="name" >
+                  <input type="text" class="form-control form-control-focus" id="name" placeholder="Enter Name" name="name" >
                   <label for="name">Last Name</label>
                   </div>
                    </div>
-                     </div></li>
-                 <li> <div class="form-floating  mb-3 ">
-                    <input type="date" class="form-control " id="Dateofbirth"min="2000-01-01"max="2005-01-01" placeholder="Enter Name" name="name" required>
+                     </div>
+                    </li>
+                 <li> 
+                  <div class="form-floating  mb-3 ">
+                    <input type="date" class="form-control form-control-focus" id="Dateofbirth"min="2000-01-01"max="2005-01-01" placeholder="Enter Name" name="name" >
                     <label for="Dateofbirth">Date of Birth</label>
                     <div class="error"></div>
-                  </div></li>
+                  </div>
+                </li>
                 <li ><span style="padding-left: 8px ;">Gender:</span> </li><div style="padding-left: 15px;" id="radio"> <div class="form-check mt-2 ">
-                  <input type="radio" class="form-check-input" id="radios1" name="optradio" value="option1" required>
+                  <input type="radio" class="form-check-input" id="radios1" name="optradio" value="option1" >
                   <label class="form-check-label" for="radio1">Male</label>
                 </div> 
                 <div class="form-check">
-                  <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2"Required>
+                  <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
                   <label class="form-check-label" for="radio2">Female</label>
                 </div>
                 <div class="form-check  mb-3">
-                  <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3" required>
+                  <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3" >
                   <label class="form-check-label" for="radio3">Other</label>
                 </div><div class="error"></div> </div>
               <li><span style="padding-left: 7px;" >Marital Status: </span></li>
               <div class="form-floating">
                 <select class="form-select" id="floatingSelect" >
-                  <option  value="" selected disabled>Open this select menu</option>
-                  <option value="1" >Single</option>
+                 
+                  <option value="1" selected >Single</option>
                   <option value="2" >Married</option>
                   <option value="3" >Divorced</option>
                   <option value="4" >Widowed</option>
@@ -101,20 +123,23 @@
               </div>
               <div class="row">
                 <div class="col-sm-4"> 
-              <li>  <div class="form-floating mt-3 mb-2 ">
-                <input type="text" class="form-control " id="lang" placeholder="Enter Name" name="name" required>
+              <li> 
+                 <div class="form-floating mt-3 mb-2 ">
+                <input type="text" class="form-control " id="lang" placeholder="Enter Name" name="name" >
                 <label for="name">Languages Known</label>
                 <div class="error"></div>
-              </div></li></div>
+              </div>
+            </li>
+            </div>
               <div class="col-sm-4">
               <li>  <div class="form-floating mt-3 mb-2 ">
-                <input type="text" class="form-control " id="nation" placeholder="Enter Name" name="name" required>
+                <input type="text" class="form-control form-control-focus" id="nation" placeholder="Enter Name" name="name" >
                 <label for="name">Nationality</label>
                 <div class="error"></div>
               </div></li></div>
               <div class="col-sm-4">
                 <li>  <div class="form-floating mt-3 mb-2 ">
-                  <input type="text" class="form-control " id="height" placeholder="Enter Name" name="name" required>
+                  <input type="text" class="form-control form-control-focus" id="height" placeholder="Enter Name" name="name" >
                   <label for="name">Height in centimeters/inches</label>
                   <div class="error"></div>
                 </div></li></div>
@@ -122,18 +147,18 @@
                   <div class="row">
                     <div class="col-sm-4">
                       <li>  <div class="form-floating mt-3 mb-2 ">
-                        <input type="text" class="form-control " id="weight" placeholder="Enter Name" name="name" required>
+                        <input type="text" class="form-control form-control-focus" id="weight" placeholder="Enter Name" name="name" >
                         <label for="name">Weight in kilograms/pounds</label><div class="error"></div>
                       </div></li></div>
                   <div class="col-sm-4">
                     <li>  <div class="form-floating mt-3 mb-2 ">
-                      <input type="text" class="form-control " id="religion" placeholder="Enter Name" name="name" required>
+                      <input type="text" class="form-control form-control-focus" id="religion" placeholder="Enter Name" name="name" >
                       <label for="name">Religion</label>
                       <div class="error"></div>
                     </div></li></div>
                     <div class="col-sm-4">
                       <li>  <div class="form-floating mt-3 mb-3 ">
-                        <input type="text" class="form-control " id="caste" placeholder="Enter Name" name="name" required>
+                        <input type="text" class="form-control form-control-focus" id="caste" placeholder="Enter Name" name="name" >
                         <label for="name">Caste</label>
                         <div class="error"></div>
                       </div></li></div>
@@ -255,12 +280,13 @@
               
               </div>
               <div class="container" style="padding-left: 50px;"> <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="mycheck"  name="remember" required>
+                <input class="form-check-input" type="checkbox" id="mycheck"  name="remember" >
                 <label class="form-check-label" for="myCheck">I agree on the above details.</label>
                 <div class="error"></div>
                 
               </div>
-            <button type="submit"  class="btn btn-primary">Submit</button></div>
+            <button type="submit"  class="btn btn-primary">Submit</button>
+          </div>
         </form>
       </div></div>
 </body>

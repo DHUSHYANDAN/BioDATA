@@ -19,13 +19,13 @@ background-color: rgba(255, 255, 255, 0);
 width: 100%; }
 #tabletext:hover{box-shadow: 0.5px 0px 5px ;}
 table,th,td{text-align: center;  vertical-align: center; background-color: white;}
-body{background-image:url(img/image1.png);width: 100%; padding: 40px; background-attachment: fixed;}
-.body2{background-color:rgba(255, 255, 255, 0.639) ; border-radius: 5px; padding: 5px;}
+body{background-color: rgba(255, 0, 0, 0); padding: 30px;}
+.body2{background-color:rgb(255, 255, 255) ; border-radius: 5px; border:  solid 1px rgb(255, 255, 255);box-shadow: 0.1px 0px 3px;}
  textarea:focus{outline:none;} 
   
-  .form-floating input:focus {outline: 0 !important;} 
+ 
   .error{color: rgb(255, 0, 0); 
 font-size: 13px;
 }
-.form-floating.success input{border-color: rgba(0, 128, 0, 0.727)}
-.form-floating.error input{border-color: red  ;} 
+.form-control-focus.success input{border-color: rgba(0, 128, 0, 0.727);box-shadow: 0 0 0 0.2rem;}
+.form-control-focus.error input{border-color: red  ;box-shadow: 0 0 0 0.2rem;} 
