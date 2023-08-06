@@ -28,4 +28,4 @@ body{background-color: rgba(255, 0, 0, 0); padding: 30px;}
 font-size: 13px;
 }
 .form-control-focus.success input{border-color: rgba(0, 128, 0, 0.727);box-shadow: 0 0 0 0.2rem;}
-.form-control-focus.error input{border-color: red  ;box-shadow: 0 0 0 0.2rem;} 
+

@@ -1,100 +1,120 @@
-const form=document.querySelector("#form");
-const Fullname=document.querySelector("#fullname");
+const form = document.querySelector("#form");
+const Fullname = document.querySelector("#name");
 const Phonenumber=document.querySelector("#phonenumber");
-const email=document.querySelector("#email");
-const Linkedin=document.querySelector("#link");
-const address=document.querySelector("#floatingTextarea2");
+const email = document.querySelector("#email");
+const Linkedin = document.querySelector("#link");
+const address = document.querySelector("#floatingTextarea2");
+
 const Firstname=document.querySelector("#firstname");
-const DateofBirth=document.querySelector("#Dateofbirth");
-const Gender=document.querySelector("#radio input[type='radio']");
-const Marital=document.querySelector("#floatingSelect");
-
-const Language=document.querySelector("#lang");
-const Height=document.querySelector("#height");
-const weight=document.querySelector("#weight");
-const Nationality=document.querySelector("#nation");
-const Religion=document.querySelector("#religion");
-const Caste=document.querySelector("#caste");
-const EQ=document.querySelector("#tabletext");
+const DateofBirth = document.querySelector("#Dateofbirth");
+const Language = document.querySelector("#lang");
+const Height = document.querySelector("#height");
+const weight = document.querySelector("#weight");
+const Nationality = document.querySelector("#nation");
+const Religion = document.querySelector("#religion");
+const Caste = document.querySelector("#caste");
+const EQ = document.querySelector("#tabletext");
 const Expre=document.querySelector("#tabletext")
-const agree=document.querySelector("#mycheck");
-   
+const agree = document.querySelector("#mycheck");
 
-form.addEventListener("submit",(event) => {
+form.addEventListener("submit", (e) => {
    
-  if(!validateInputs()){
-   event.preventDefault();
-   console.log('submited');
-   }
+    console.log(e.preventDefault());
+  if (!validateInputs()) {
+    e.preventDefault();
+   
+  }
 });
+
 Fullname.addEventListener('keyup', validateInputs);
-function validateInputs(){
-    const FullnameVal=Fullname.Value ;
-    const PhonenumberVal=Phonenumber.Value ;
-    const emailVal=email.Value ;
-    const LinkedinVal=Linkedin.Value ;
-    const addressVal=address.Value ;
-   const FirstnameVal=Firstname.Value ;
-    const DateofBirthVal=DateofBirth.Value ;
-    const GenderVal=Gender.Value ;
-    const ReligionVal=Religion.Value ;
-    const LanguageVal=Language.Value ;
-    const HeightVal=Height.Value ;
-    const weightVal=weight.Value ;
-    const NationalityVal=Nationality.Value ;
-    const CasteVal=Caste.Value ;
-    const EQVal=EQ.Value ;
-    const ExpreVal=Expre.Value ;
-    
-    const agreeVal=agree.Value ;
-    let success=true;
+Phonenumber.addEventListener('keyup', validateInputs);
+email.addEventListener('keyup', validateInputs);
+Linkedin.addEventListener('keyup', validateInputs);
+address.addEventListener('keyup', validateInputs);
+Firstname.addEventListener('keyup', validateInputs);
 
-    console.log("Full Name : " + Fullname.value);
-    if(FullnameVal === undefined ||Fullname.Value===""){
-        success=false;
-        setError(Fullname,"name is required")
-    }
-    else{
-        setSuccess(Fullname)
-    } 
 
-    if(emailVal === undefined||emailVal===""){
-        success=false;
-        setError(email,"email is required")
-    }
-    else if(!validateEmail(emailVal)){ 
-        success=false;
-        setError(email,'Please Enter valid Email')
-    }else{setSuccess(email)} 
 
-    if(PhonenumberVal === undefined ||PhonenumberVal===""){
-        success=false;
-        setError(Phonenumber,"Phonenumber is required")
-    }
-    else if(!validatePhonenumber(PhonenumberVal)){ 
-        success=false;
-        setError(Phonenumber,'Please Enter valid Phonenumber')
-    }else{setSuccess(Phonenumber)} 
+function validateInputs() {
+  Fullname.value;
+  Phonenumber.value ;
+   email.value;
+   Linkedin.value;
+   address.value;
+   Firstname.value ;
+   DateofBirth.value;
+   Religion.value;
+   Language.value ;
+   Height.value;
+   weight.value ;
+   Nationality.value;
+   Caste.value;
+   EQ.value;
+   Expre.value;
+   agree.value;
+   let success = true;
 
-    if(LinkedinVal=== undefined ||LinkedinVal===""){
-        success=false;
-        setError(Linkedin,"LinkedIn Profile is required")
-    }
-    else if(!validateEmail(LinkedinVal)){ 
-     success=false;
-     setError(Linkedin," Please Enter valid LinkedIn LINK")
-    }
-    else{setSuccess(Linkedin)} 
+console.log("Full Name : " +Fullname.value);
+console.log("phonenumber : " +Phonenumber.value);
+console.log("email : " +email.value,"adresss: "+address.value,);
+console.log("Firstname:"+Firstname.value);
+console.log("DateofBirth"+DateofBirth.value);
+console.log("language:"+Language.value);
+console.log("Nationality:"+Nationality.value);
+console.log("Height:"+Height.value);
+console.log("weight:"+weight.value);
+console.log("Religion:"+Religion.value);
+console.log("Caste:"+Caste.value);
+console.log("EQ:"+EQ.value);
+console.log("Expre:"+Expre.value);
+console.log("agree:"+agree.value);
 
-    if(addressVal=== undefined ||addressVal===""){
-        success=false;
-        setError(address,"address is required")
-    }
-    else{
-        setSuccess(address)
-    } 
- 
-    if(FirstnameVal=== undefined ||FirstnameVal===""){
+  if(Fullname.value === "" || Fullname.value ===undefined ) {
+
+    success = false;
+    setError(Fullname, "name is required");
+  } else {
+    setSuccess(Fullname);
+  }
+
+  if(Phonenumber.value=== "" ||Phonenumber.value===undefined ){
+    success=false;
+    setError(Phonenumber,"Phonenumber is required")
+}
+ if(!validatePhonenumber(Phonenumber.value)){ 
+    success=false;
+    setError(Phonenumber,'Please Enter valid Phonenumber')
+}else{setSuccess(Phonenumber)} 
+
+if(email.value === "" ||email.value===undefined){
+    success=false;
+    setError(email,"email is required")
+}
+ if(!validateEmail(email.value)){ 
+    success=false;
+    setError(email,'Please Enter valid Email')
+}else{setSuccess(email)} 
+
+
+  if (Linkedin.value === ""||Linkedin.value===undefined) {
+    success = false;
+    setError(Linkedin, "LinkedIn Profile is required");
+  }  if (!validateLink(Linkedin.value)) {
+    success = false;
+    setError(Linkedin, " Please Enter valid LinkedIn LINK");
+  } else {
+    setSuccess(Linkedin);
+  }
+
+  if(address.value=== ""||address.value===undefined){
+    success=false;
+    setError(address,"address is required")
+}
+else{
+    setSuccess(address)
+} 
+
+  if(Firstname.value===  ""||Firstname.value===undefined){
         success=false;
         setError(Firstname,"name is required")
     }
@@ -102,123 +122,118 @@ function validateInputs(){
         setSuccess(Firstname)
     }  
     
-    if(DateofBirthVal=== undefined ||DateofBirthVal===""){
+
+    if(DateofBirth.value=== ""){
         success=false;
         setError(DateofBirth,"Date of Birth is required")
     }
     else{
         setSuccess(DateofBirth)
     } 
- 
-    if(GenderVal=== undefined ||GenderVal===""){
-        success=false;
-        setError(Gender,"Language is required")
-    }
-    else{
-        setSuccess(Gender)
-    }  
 
-    if(LanguageVal=== undefined ||LanguageVal===""){
+   
+
+ 
+    if(Language.value=== ""||Language.value=== undefined){
         success=false;
         setError(Language,"Language is required")
     }
     else{
         setSuccess(Language)
     } 
-    if(NationalityVal=== undefined ||NationalityVal===""){
-        success=false;
-        setError(Nationality,"Nationality is required")
-    }
-    else{
-        setSuccess(Nationality)
-    } 
-    if(HeightVal=== undefined ||HeightVal===""){
-        success=false;
-        setError(Height,"height is required")
-    }
-    else{
-        setSuccess(Height)
-    } 
-    if(weightVal=== undefined ||weightVal===""){
-        success=false;
-        setError(weight,"weight is required")
-    }
-    else{
-        setSuccess(weight)
-    } 
-    if(ReligionVal=== undefined ||ReligionVal===""){
-        success=false;
-        setError(Religion,"religion is required")
-    }
-    else{
-        setSuccess(Religion)
-    } 
-    if(CasteVal=== undefined ||CasteVal===""){
-        success=false;
-        setError(Caste,"caste is required")
-    }
-    else{
-        setSuccess(Caste)
-    }
-    if(EQVal=== undefined ||EQVal===""){
-        success=false;
-        setError(EQ,"EQ is required")
-    }
-    else{
-        setSuccess(EQ)
-    }  
-    if(ExpreVal=== undefined ||ExpreVal===""){
-        success=false;
-        setError(Expre,"EQ is required")
-    }
-    else{
-        setSuccess(Expre)
-    }  
-    
-    
-    
-    if(agreeVal=== undefined ||agreeVal===""){
-        success=false;
-        setError(agree,"agree is required")
-    }
-    else{
-        setSuccess(agree)
-    }  
-    
-    
-    return success;
+
+  if(Nationality.value === ""||Nationality.value=== undefined)
+   {
+    success = false;
+    setError(Nationality, "Nationality is required");
+  } else {
+    setSuccess(Nationality);
+  }
+  if (Height.value ===  ""||Height.value===undefined) {
+    success = false;
+    setError(Height, "height is required");
+   
+  } else {
+    setSuccess(Height);
+  }
+   if (weight.value === ""||weight.value ===undefined ) {
+     success = false;
+     setError(weight, "weight is required");
+   } else {
+     setSuccess(weight);
+   }
+  if (Religion.value === ""||Religion.value === undefined) {
+    success = false;
+    setError(Religion, "religion is required");
+  } else {
+    setSuccess(Religion);
+  }
+  if (Caste.value === ""||Caste.value === undefined) {
+    success = false;
+    setError(Caste, "caste is required");
+  } else {
+    setSuccess(Caste);
+  }
+ 
+  if (EQ.value === ""||EQ.value === undefined) {
+    success = false;
+    setError(EQ, "Educational qualification is required");
+  } else {
+    setSuccess(EQ);
+  }
+
+  if (Expre.value === ""||Expre.value === undefined ) {
+    success = false;
+    setError(Expre, "Experience qualification is required");
+  } else {
+    setSuccess(Expre);
+  }
+
+ 
+
+   if (!(agree.value===checkbox.checked)||agree.value=== undefined ) {
+    success = false;
+    setError(agree, "agree is required");
+  } else {
+    setSuccess(agree);
+  }
+
+  return success;
 }
 
-function setError(element,message){
-    const formfloating = element.parentElement;
-    const errorElement=formfloating.querySelector('.error')
+function setError(element, message) {
+  console.log(element);
+  console.log(message);
 
-    errorElement.innerText=message;
-    formfloating.classlist.add('error')
-    formfloating.classlist.remove('success')
-}
-      
-function setSuccess(element){
-    const formfloating= element.parentElement;
-    const errorElement=formfloating.querySelector(".error")
+  const formfloating = element.parentElement;
+  const errorElement = formfloating.querySelector(".error");
+  
+  console.log(errorElement);
 
-       errorElement.innerText='';
-      formfloating.classlist.add("success")
-       formfloating.classlist.remove("error")
+  errorElement.innerText = message;
+  formfloating.classlist.add("error");
+  formfloating.classlist.remove("success");
 }
 
-const  validateEmail=(email)=>{
-    return String(email)
+function setSuccess(element) {
+  const formfloating = element.parentElement;
+  const errorElement = formfloating.querySelector(".error");
+
+  errorElement.innerText = "";
+ // formfloating.classlist.add("success");
+ // formfloating.classlist.remove("error");
+}
+
+const validateEmail = (email) => {
+  return String(email)
     .toLowerCase()
     .match(/^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/);
 };
 
-const  validateLink=(Linkedin)=>{
-    return String(Linkedin)
-    .match(/^(ftp|http|https):\/\/[^ "]+$/);
+const validateLink = (Linkedin) => {
+  return String(Linkedin).match(/^(ftp|http|https):\/\/[^ "]+$/);
 };
 const  validatePhonenumber=(Phonenumber)=>{
-    return String(Phonenumber)
+    return (Phonenumber)
     .match(/^[0-9]{10}$/);
 };
-

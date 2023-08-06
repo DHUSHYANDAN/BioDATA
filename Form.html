@@ -28,7 +28,7 @@
           
                   <div class="form-floating    mb-2 ">
           
-                    <input type="text" class="form-control form-control-focus" id="fullname" placeholder="Enter Name" name="name"  >
+                    <input type="text" class="form-control form-control-focus" id="name" placeholder="Enter Name" name="fullname"  >
           
                     <label for="name">Full Name</label>
           
@@ -55,7 +55,7 @@
                     <label for="email">Email</label>
                     <div class="error"></div>
                   </div>
-                </li>
+                </li> 
                  </div>
                    <div class="col-sm-6"> 
               <li>
@@ -84,7 +84,7 @@
                    </div>
                    <div class="col">
                   <div class="form-floating mt-3 mb-2 ">
-                  <input type="text" class="form-control form-control-focus" id="name" placeholder="Enter Name" name="name" >
+                  <input type="text" class="form-control form-control-focus" id="lastname" placeholder="Enter Name" name="name" >
                   <label for="name">Last Name</label>
                   </div>
                    </div>
@@ -98,7 +98,7 @@
                   </div>
                 </li>
                 <li ><span style="padding-left: 8px ;">Gender:</span> </li><div style="padding-left: 15px;" id="radio"> <div class="form-check mt-2 ">
-                  <input type="radio" class="form-check-input" id="radios1" name="optradio" value="option1" >
+                  <input type="radio" class="form-check-input " id="radios1" name="optradio" value="option1" required >
                   <label class="form-check-label" for="radio1">Male</label>
                 </div> 
                 <div class="form-check">
@@ -125,21 +125,24 @@
                 <div class="col-sm-4"> 
               <li> 
                  <div class="form-floating mt-3 mb-2 ">
-                <input type="text" class="form-control " id="lang" placeholder="Enter Name" name="name" >
-                <label for="name">Languages Known</label>
+                <input type="text" class="form-control form-control-focus" id="lang" placeholder="Language" name="name" >
+                <label for="lang">Languages Known</label>
                 <div class="error"></div>
               </div>
             </li>
             </div>
               <div class="col-sm-4">
-              <li>  <div class="form-floating mt-3 mb-2 ">
-                <input type="text" class="form-control form-control-focus" id="nation" placeholder="Enter Name" name="name" >
-                <label for="name">Nationality</label>
+              <li> 
+                 <div class="form-floating mt-3 mb-2 ">
+                <input type="text" class="form-control form-control-focus" id="nation" placeholder="Nationality" name="name" >
+                <label for="nation">Nationality</label>
                 <div class="error"></div>
-              </div></li></div>
+              </div>
+            </li>
+            </div>
               <div class="col-sm-4">
                 <li>  <div class="form-floating mt-3 mb-2 ">
-                  <input type="text" class="form-control form-control-focus" id="height" placeholder="Enter Name" name="name" >
+                  <input type="number" class="form-control form-control-focus" id="height" placeholder="Enter Name" name="name" >
                   <label for="name">Height in centimeters/inches</label>
                   <div class="error"></div>
                 </div></li></div>
@@ -147,11 +150,11 @@
                   <div class="row">
                     <div class="col-sm-4">
                       <li>  <div class="form-floating mt-3 mb-2 ">
-                        <input type="text" class="form-control form-control-focus" id="weight" placeholder="Enter Name" name="name" >
+                        <input type="number" class="form-control form-control-focus" id="weight" placeholder="Enter Name" name="name" >
                         <label for="name">Weight in kilograms/pounds</label><div class="error"></div>
                       </div></li></div>
                   <div class="col-sm-4">
-                    <li>  <div class="form-floating mt-3 mb-2 ">
+                    <li class="form-floating">  <div class="form-floating mt-3 mb-2 ">
                       <input type="text" class="form-control form-control-focus" id="religion" placeholder="Enter Name" name="name" >
                       <label for="name">Religion</label>
                       <div class="error"></div>
@@ -163,7 +166,7 @@
                         <div class="error"></div>
                       </div></li></div>
                     </div>
-                    <li>Educational Qualifications:
+                    <li >Educational Qualifications:
                       <table class="table table-hover  table-bordered mt-2">
                         <thead>
                           <tr>
@@ -177,7 +180,7 @@
                           <tr>
                             <td>Elementary</td>
                           
-                            <td><textarea id="tabletext"></textarea></td>
+                            <td><textarea id="tabletext" class=""></textarea></td>
                             
                             <td><textarea id="tabletext"></textarea></td>
                             <td><textarea id="tabletext"></textarea></td>
@@ -230,7 +233,7 @@
                         </tbody>
                       </table><div class="error"></div>
                     </li>
-                    <li ><span style="padding-left: 8px ;">Skills:</span> </li><div style="padding-left: 15px;" > 
+                    <li class="form-floating"><span style="padding-left: 8px ;">Skills:</span> </li><div style="padding-left: 15px;" > 
                       <div class="row"><div class="col">
                       <div class="form-check mt-2 ">
                       <input type="checkbox" class="form-check-input" id="radio1" name="optradio" value="option1" >
@@ -279,7 +282,7 @@
             </ol>
               
               </div>
-              <div class="container" style="padding-left: 50px;"> <div class="form-check mb-3">
+              <div class="container" style="padding-left: 50px;"> <div class="form-check formfloating mb-3 ">
                 <input class="form-check-input" type="checkbox" id="mycheck"  name="remember" >
                 <label class="form-check-label" for="myCheck">I agree on the above details.</label>
                 <div class="error"></div>
