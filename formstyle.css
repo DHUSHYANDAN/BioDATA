@@ -9,7 +9,9 @@
 
   #fullname,#firstname,#name{height: 45px;}
   label[for=number] {padding: 11px;}
-  #phonenumber{height: 45px;}
+  #phonenumber{height: 45px;
+    }
+    label[for=phonenumber]{padding: 11px;}
   label[for=email] {padding: 11px;}
   #email{height: 45px;}
   #link{height: 45px;}
