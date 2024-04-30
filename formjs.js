@@ -113,12 +113,15 @@ function checkAgreement() {
   }
 
   form.addEventListener("submit", function(event) {
-    event.preventDefault();
-    console.log("Form submission prevented");
+    
     checkRequired(inputs);
     checkGender();
     checkStatus();
     checkAgreement();
+    if (!checkRequired(inputs) || !checkGender() || !checkStatus() || checkAgreement() ){
+      event.preventDefault();
+      console.log("Form submission is prevented");
+    }
   });
 
 
