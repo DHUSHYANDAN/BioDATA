@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
   const form = document.querySelector("#form");
-  const inputs = form.querySelectorAll("#username,#phonenumber,#link,#email,#textarea1,#firstname,#Dateofbirth");
+  const inputs = form.querySelectorAll("#username,#phonenumber,#link,#email,#textarea1,#firstname,#Dateofbirth,#lang,#nation,#height,#weight,#religion,#caste,#skills           ");
   const genderInputs = form.querySelectorAll("input[name='gender']");
   const statusSelect = form.querySelector("#floatingSelect");
 
@@ -71,6 +71,21 @@ function checkStatus() {
     successMessage(statusSelect.parentElement);
   }
 }
+function checkAgreement() {
+  const checkbox = document.querySelector("#mycheck");
+  errorMessage(checkbox.parentElement, "You must agree to the terms.");
+  if (!checkbox.checked) {
+    const checkbox = document.querySelector("#mycheck");
+    checkbox.style.borderColor = '#ff6347';
+   
+  } else {
+    successMessage(checkbox.parentElement);
+    checkbox.style.borderColor = 'lightgreen';
+    
+    
+  }
+}
+
 
 // this for geting the elements by it attribute name
   function getName(input) {
@@ -103,6 +118,7 @@ function checkStatus() {
     checkRequired(inputs);
     checkGender();
     checkStatus();
+    checkAgreement();
   });
 
 
