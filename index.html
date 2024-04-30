@@ -14,29 +14,31 @@
   <div class="body2">
     <div class="container mt-3">
       <h2 class="head mb-3">BIO DATA</h2>
-      <form action="" id="form" class="">
+      <form action="" autocomplete="off" id="form" class="">
         <div>
           <span class="head2">Contact Information:</span>
           <ol>
-            <div class="row mt-3">
+            <div class="row mt-2">
               <div class="col-sm-6">
                 <li>
-                  <div class=" mb-2">
-                    <label for="name">Full Name</label>
-                    <input type="text" class="form-control " id="name" placeholder="Enter Name" name="fullname" required />
-                    <div class="error"></div>
+                  <div class="fi  mb-2">
+                    <label for="username">Full Name <b><span style="color: rgb(165, 42, 99);">*</span></b></label>
+                    <input type="text" class="form-control mb-2" id="username" placeholder="Enter Name" name="Name"  />
+                    <div class="eror"></div>
+                    <div class="sucess"></div>
 
                   </div>
                 </li>
               </div>
               <div class="col-sm-6">
                 <li>
-                  <div class=" mb-2">
-                    <label for="phonenumber">Phone Number</label>
-                    <input type="text" class="form-control " id="phonenumber" placeholder="Enter Phone number"
-                      name="Phone number" required />
+                  <div class="fi mb-2">
+                    <label for="phonenumber">Phone Number <b><span style="color: rgb(165, 42, 63);">*</span></b></label>
+                    <input type="text" class="form-control mb-2" id="phonenumber" placeholder="Enter Phone number"
+                      name="Phonenumber"  />
 
-                    <div class="error"></div>
+                    <div class="eror"></div>
+                    <div class="sucess"></div>
                   </div>
                 </li>
               </div>
@@ -44,33 +46,36 @@
             <div class="row">
               <div class="col-sm-6">
                 <li>
-                  <div class=" mb-2">
-                    <label for="phonenumber">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email"
-                      name="email" required/>
+                  <div class="fi mb-2">
+                    <label for="email">Email <b><span style="color: rgb(165, 42, 63);">*</span></b></label>
+                    <input type="text" class="form-control mb-2" id="email" placeholder="Enter email"
+                      name="Email" />
 
-                    <div class="error"></div>
+                    <div class="eror"></div><div class="sucess"></div>
                   </div>
                 </li>
               </div>
               <div class="col-sm-6">
                 <li>
-                  <div class=" mb-2">
-                    <label for="link">LinkedIn Profile</label>
-                    <input type="url" class="form-control " id="link" placeholder="Enter Link"
-                      name="link" required/>
+                  <div class="fi mb-2">
+                    <label for="link">LinkedIn Profile <b><span style="color: rgb(165, 42, 63);">*</span></b></label>
+                    <input type="text" class="form-control mb-2" id="link" placeholder="Enter Link"
+                      name="link" />
                    
-                    <div class="error"></div>
+                    <div class="eror"></div>
+                    <div class="sucess"></div>
+                    
                   </div>
                 </li>
               </div>
             </div>
             <li>
-              <div class="mb-4" >
-                <label for="floatingTextarea2">Address</label>
-                <textarea class="form-control w-75 mt-2" placeholder="Enter the Address"
-                    id="floatingTextarea2" required name="address" style="height: 100px;" ></textarea>
-                <div class="error"></div>
+              <div class="fi mt-2 mb-4" >
+                <label for="textarea1">Address <b><span style="color: rgb(165, 42, 63);">*</span></b></label>
+                <textarea name="text"class="form-control w-75 mt-2 mb-2" placeholder="Enter the Address"
+                    id="textarea1" type="address" name="address" style="height: 100px;" ></textarea>
+                  
+                <div class="eror"></div><div class="sucess"></div>
             </div>
             
               
@@ -78,99 +83,102 @@
           </ol>
         </div>
         <div>
-          <span class="head2">Personal Information:</span>
+          <span class="head2">Personal Information: </span>
           <ol>
             <li>
               <div class="row">
                 <div class="col">
-                  <div class="mt-3 mb-2 ">
-                    <label for="Firstname">First Name</label>
-                    <input type="text" class="form-control mt-2 " id="firstname" placeholder="Enter Name"
-                      name="name" required/>
+                  <div class="fi mt-2 mb-2 ">
+                    <label for="Firstname">First Name <b><span style="color: rgb(165, 42, 63);">*</span></b></label>
+                    <input type="firstname" class="form-control mt-2 mb-2 " id="firstname" placeholder="Enter Name"
+                      name="Firstname" />
                   
-                    <div class="error"></div>
+                    <div class="eror"></div><div class="sucess"></div>
                   </div>
                 </div>
                 <div class="col">
-                  <div class="  ">
-                    <label for="name">Last Name</label>
+                  <div class=" mt-1 ">
+                    <label for="name" class="mb-2">Last Name</label>
                     <input type="text" class="form-control  " style="height:46px ;"  id="lastname" placeholder="Enter Name"
-                      name="name" />
+                      name="na" />
                    
                   </div>
                 </div>
               </div>
             </li>
             <li>
-              <div class="mb-3">
-                <label for="Dateofbirth">Date of Birth</label>
-                <input type="date" class="form-control mt-2" id="Dateofbirth" min="2000-01-01"
-                  max="2005-01-01" placeholder="Enter Name" name="name" />
+              <div class="fi mb-3">
+                <label for="Dateofbirth">Date of Birth <b><span style="color: rgb(165, 42, 63);">*</span></b></label>
+                <input type="date" class="form-control mt-2 mb-2 w-50" id="Dateofbirth" min="2000-01-01"
+                  max="2005-01-01" placeholder="Enter Name" name="date of birth" />
                 
-                <div class="error"></div>
+                <div class="eror"></div><div class="sucess"></div>
               </div>
             </li>
-            <li><span style="padding-left: 8px">Gender:</span></li>
-            <div style="padding-left: 15px" name="radio" id="radio">
+            <li><span style="padding-left: 8px">Gender: <b><span style="color: rgb(165, 42, 63);">*</span></b></span></li>
+            <div class="fi " style="padding-left: 15px" name="Gender" id="radio">
               <div class="form-check mt-2">
                 <label class="form-check-label" for="radio1">Male</label>
-                <input type="radio" class="form-check-input" id="radios1" name="gender" value="option1" required/>
+                <input type="radio" class="form-check-input" id="radios1" name="gender" value="option1" />
                 
               </div>
               <div class="form-check">
                 <label class="form-check-label" for="radio2">Female</label>
-                <input type="radio" class="form-check-input" id="radio2" name="gender" value="option2" required />
+                <input type="radio" class="form-check-input" id="radio2" name="gender" value="option2"  />
                 
               </div>
-              <div class="form-check mb-3">
+              <div class="form-check mb-2">
                 <label class="form-check-label" for="radio3" >Other</label>
-                <input type="radio" class="form-check-input" id="radio3" name="gender" value="option3" required/>
+                <input type="radio" class="form-check-input" id="radio3" name="gender" value="option3" />
               
               </div>
-              <div class="error"></div>
+              <div class="eror"></div><div class="sucess"></div>
             </div>
-            <li>           <div class="">
-              <label for="floatingSelect"> select the Status</label>
-              <select class="form-select mt-3 w-50" name="select" id="floatingSelect">
-                <option value="0"></option>
+            <li><div class="fi mt-2">
+              <label for="floatingSelect"> select the Status <b><span style="color: rgb(165, 42, 63);">*</span></b></label>
+              <select class="form-select mt-3 mb-2 w-50"  name="select" id="floatingSelect">
+                <option value="0" selected disabled >Select</option>
                 <option value="1">Single</option>
                 <option value="2">Married</option>
                 <option value="3">Divorced</option>
                 <option value="4">Widowed</option>
               </select>
              
-              <div class="error"></div>
+              <div class="eror "></div><div class="sucess "></div>
              </div>
           </li>
  
             <div class="row">
               <div class="col-sm-4">
                 <li>
-                  <div class="form-floating mt-3 mb-2">
-                    <input type="text" class="form-control form-control-focus" id="lang" placeholder="Language"
+                  <div class=" mt-3 mb-2">
+                    <label for="lang">Languages Known <b><span style="color: rgb(165, 42, 63);">*</span></b></label>
+                    <input type="text" class="form-control mt-2" id="lang" placeholder="Language"
                       name="name" />
-                    <label for="lang">Languages Known</label>
-                    <div class="error"></div>
+              
+                    <div class="eror"></div><div class="sucess"></div>
                   </div>
                 </li>
               </div>
               <div class="col-sm-4">
                 <li>
-                  <div class="form-floating mt-3 mb-2">
-                    <input type="text" class="form-control form-control-focus" id="nation" placeholder="Nationality"
+                  <div class=" mt-3 mb-2">
+                    <label for="nation">Nationality <b><span style="color: rgb(165, 42, 63);">*</span></b></label>
+                    <input type="text" class="form-control mt-2 " id="nation" placeholder="Nationality"
                       name="name" />
-                    <label for="nation">Nationality</label>
-                    <div class="error"></div>
+                    
+                    <div class="eror"></div><div class="sucess"></div>
                   </div>
                 </li>
               </div>
               <div class="col-sm-4">
                 <li>
-                  <div class="form-floating mt-3 mb-2">
-                    <input type="number" class="form-control form-control-focus" id="height" placeholder="Enter Name"
+                  <div class=" ">
+                    <label for="name">Height in centimeters <b><span style="color: rgb(165, 42, 63);">*</span></b></label>
+                    <input type="number" class="form-control " id="height" placeholder="Eample: 164"
                       name="name" />
-                    <label for="name">Height in centimeters/inches</label>
-                    <div class="error"></div>
+                    
+                    <div class="eror"></div><div class="sucess"></div>
                   </div>
                 </li>
               </div>
@@ -178,37 +186,40 @@
             <div class="row">
               <div class="col-sm-4">
                 <li>
-                  <div class="form-floating mt-3 mb-2">
-                    <input type="number" class="form-control form-control-focus" id="weight" placeholder="Enter Name"
+                  <div class=" ">
+                    <label for="name">Weight in kilograms <b><span style="color: rgb(165, 42, 63);">*</span></b></label>
+                    <input type="number" class="form-control " id="weight" placeholder="Example: 80"
                       name="name" />
-                    <label for="name">Weight in kilograms/pounds</label>
-                    <div class="error"></div>
+                   
+                    <div class="eror"></div><div class="sucess"></div>
                   </div>
                 </li>
               </div>
               <div class="col-sm-4">
-                <li class="form-floating">
-                  <div class="form-floating mt-3 mb-2">
-                    <input type="text" class="form-control form-control-focus" id="religion" placeholder="Enter Name"
+                <li >
+                  <div class=" ">
+                    <label for="name">Religion <b><span style="color: rgb(165, 42, 63);">*</span></b></label>
+                    <input type="text" class="form-control " id="religion" placeholder="Enter Religion"
                       name="name" />
-                    <label for="name">Religion</label>
-                    <div class="error"></div>
+                    
+                    <div class="eror"></div><div class="sucess"></div>
                   </div>
                 </li>
               </div>
               <div class="col-sm-4">
                 <li>
-                  <div class="form-floating mt-3 mb-3">
-                    <input type="text" class="form-control form-control-focus" id="caste" placeholder="Enter Name"
+                  <div class=" mb-3">
+                    <label for="name">Caste <b><span style="color: rgb(165, 42, 63);">*</span></b></label>
+                    <input type="text" class="form-control " id="caste" placeholder="Enter Caste"
                       name="name" />
-                    <label for="name">Caste</label>
-                    <div class="error"></div>
+                    
+                    <div class="eror"></div><div class="sucess"></div>
                   </div>
                 </li>
               </div>
             </div>
             <li>
-              Educational Qualifications:
+              Educational Qualifications: <b><span style="color: rgb(165, 42, 63);">*</span></b>
               <table class="table table-hover table-bordered mt-2">
                 <thead>
                   <tr>
@@ -222,29 +233,29 @@
                   <tr>
                     <td>Elementary</td>
 
-                    <td><textarea id="tabletext" class="" required></textarea></td>
+                    <td><textarea name="text" class="tabletext" ></textarea><div class="eror"></div><div class="sucess"></div></td>
 
-                    <td><textarea id="tabletext" required></textarea></td>
-                    <td><textarea id="tabletext" required></textarea></td>
+                    <td><textarea name="text" class="tabletext" ></textarea><div class="eror"></div><div class="sucess"></div></td>
+                    <td><textarea name="text" class="tabletext" ></textarea><div class="eror"></div><div class="sucess"></div></td>
                   </tr>
                   <tr>
                     <td>High School</td>
-                    <td><textarea id="tabletext"></textarea></td>
-                    <td><textarea id="tabletext"></textarea></td>
-                    <td><textarea id="tabletext"></textarea></td>
+                    <td><textarea name="text" class="tabletext"></textarea><div class="eror"></div><div class="sucess"></div></td>
+                    <td><textarea name="text" class="tabletext"></textarea><div class="eror"></div><div class="sucess"></div></td>
+                    <td><textarea name="text" class="tabletext"></textarea><div class="eror"></div><div class="sucess"></div></td>
                   </tr>
                   <tr>
                     <td>College</td>
-                    <td><textarea id="tabletext"></textarea></td>
-                    <td><textarea id="tabletext"></textarea></td>
-                    <td><textarea id="tabletext"></textarea></td>
+                    <td><textarea name="text" class="tabletext"></textarea><div class="eror"></div><div class="sucess"></div></td>
+                    <td><textarea name="text" class="tabletext"></textarea><div class="eror"></div><div class="sucess"></div></td>
+                    <td><textarea name="text" class="tabletext"></textarea><div class="eror"></div><div class="sucess"></div><div class="eror"></div><div class="sucess"></div></td>
                   </tr>
                 </tbody>
               </table>
-              <div class="error"></div>
+              <div class="eror"></div><div class="sucess"></div>
             </li>
             <li>
-              Experience:
+              Experience: <b><span style="color: rgb(165, 42, 63);">*</span></b>
               <table class="table table-hover table-bordered mt-2">
                 <thead>
                   <tr>
@@ -258,96 +269,55 @@
                   <tr>
                     <td style="text-align: center">1.</td>
 
-                    <td><textarea id="tabletext"></textarea></td>
-                    <td><textarea id="tabletext"></textarea></td>
-                    <td><textarea id="tabletext"></textarea></td>
+                    <td><textarea name="text" class="tabletext"></textarea><div class="eror"></div><div class="sucess"></div></td>
+                    <td><textarea name="text" class="tabletext"></textarea><div class="eror"></div><div class="sucess"></div></td>
+                    <td><textarea name="text" class="tabletext"></textarea><div class="eror"></div><div class="sucess"></div></td>
                   </tr>
                   <tr>
                     <td style="text-align: center">2.</td>
-                    <td><textarea id="tabletext"></textarea></td>
-                    <td><textarea id="tabletext"></textarea></td>
-                    <td><textarea id="tabletext"></textarea></td>
+                    <td><textarea name="text2" class="tabletext"></textarea></td>
+                    <td><textarea name="text2" class="tabletext"></textarea></td>
+                    <td><textarea name="text" class="tabletext"></textarea></td>
                   </tr>
                   <tr>
                     <td style="text-align: center">3.</td>
-                    <td><textarea id="tabletext"></textarea></td>
-                    <td><textarea id="tabletext"></textarea></td>
-                    <td><textarea id="tabletext"></textarea></td>
+                    <td><textarea name="text2" class="tabletext"></textarea></td>
+                    <td><textarea name="text2" class="tabletext"></textarea></td>
+                    <td><textarea name="text2" class="tabletext"></textarea></td>
                   </tr>
                 </tbody>
               </table>
-              <div class="error"></div>
+              
             </li>
-            <li class="form-floating">
-              <span style="padding-left: 8px">Skills:</span>
-            </li>
-            <div style="padding-left: 15px">
-              <div class="row">
-                <div class="col">
-                  <div class="form-check mt-2">
-                    <input type="checkbox" class="form-check-input" id="radio1" name="optradio" value="option1" />
-                    <label class="form-check-label" for="radio1">C</label>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="form-check mt-2">
-                    <input type="checkbox" class="form-check-input" id="radio1" name="optradio" value="option1" />
-                    <label class="form-check-label" for="radio1">C++</label>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="form-check mt-2">
-                    <input type="checkbox" class="form-check-input" id="radio1" name="optradio" value="option1" />
-                    <label class="form-check-label" for="radio1">Java</label>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="form-check mt-2">
-                    <input type="checkbox" class="form-check-input" id="radio1" name="optradio" value="option1" />
-                    <label class="form-check-label" for="radio1">Javascript</label>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="form-check mt-2">
-                    <input type="checkbox" class="form-check-input" id="radio1" name="optradio" value="option1" />
-                    <label class="form-check-label" for="radio1">Python</label>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="form-check mt-2">
-                    <input type="checkbox" class="form-check-input" id="radio1" name="optradio" value="option1" />
-                    <label class="form-check-label" for="radio1">PHP</label>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="form-check mt-2">
-                    <input type="checkbox" class="form-check-input" id="radio1" name="optradio" value="option1" />
-                    <label class="form-check-label" for="radio1">SQL</label>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="form-check mt-2">
-                    <input type="checkbox" class="form-check-input" id="radio1" name="optradio" value="option1" />
-                    <label class="form-check-label" for="radio1">Node js</label>
-                  </div>
-                </div>
+            <li class="">
+             
+              <div class=" mb-3">
+                <label for="name">Skills: <b><span style="color: rgb(165, 42, 63);">*</span></b></label>
+                <input type="text" class="form-control " id="skills" placeholder="Enter your skills"
+                  name="name" />
+                
+                <div class="eror"></div><div class="sucess"></div>
               </div>
-            </div>
+
+
+            </li>
+           
 
             <li>
-              <div class="form-floating mb-4 mt-2">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                  style="height: px"></textarea>
-                <label for="floatingTextarea2">Feed Back</label>
+              <div class="mb-4 mt-2">
+                <label for="floatingTextarea2 ">Any comments </label>
+                <textarea name="comment" class="form-control mt-2" placeholder="Leave a comment here" 
+                  ></textarea>
+               
               </div>
             </li>
           </ol>
         </div>
-        <div class="container" style="padding-left: 50px">
-          <div class="form-check formfloating mb-3">
-            <input class="form-check-input" type="checkbox" id="mycheck" name="remember" required />
-            <label class="form-check-label" for="myCheck">I agree on the above details.</label>
-            <div class="error"></div>
+        <div class="container">
+          <div class=" mb-3">
+            <input class="form-check-input" type="checkbox" id="mycheck" name="remember"  />
+            <label class="form-check-label" for="myCheck">I agree on the above details. <b><span style="color: rgb(165, 42, 63);">*</span></b></label>
+            <div class="eror"></div><div class="sucess"></div>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>

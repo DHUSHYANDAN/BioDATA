@@ -12,11 +12,11 @@
     font-size:medium;
     }
 
-label[for=name] {
+label[for=username] {
     padding: 11px;
     }
 
-  #fullname,#firstname,#name{
+  #fullname,#firstname,#username{
      height: 45px;
      }
   
@@ -48,13 +48,13 @@ label[for=link] {
      padding:11px;
      }
 
-#tabletext{
-      border: solid 1px rgba(255, 255, 255, 0.155);
+.tabletext{
+      border: solid  1px rgba(255, 255, 255, 0.155);
       background-color: rgba(255, 255, 255, 0);
       width: 100%;
      }
 
-#tabletext:hover{
+.tabletext:hover{
       box-shadow: 0.5px 0px 5px ;
      }
 
@@ -67,7 +67,7 @@ body{
 .body2{
        background-color:rgb(255, 255, 255) ;
         border-radius: 5px; 
-        border:  solid 1px rgb(255, 255, 255);
+        border:  solid 0.5px 1px rgb(255, 255, 255);
         box-shadow: 0.1px 0px 3px;
         padding:5px;
       }
@@ -75,11 +75,79 @@ body{
        outline:none;} 
   
  
-  .error{
+.fi .eror{
         color: rgb(255, 0, 0); 
         font-size: 13px;
         }
+.fi.error input {
+    
+         border:solid 0.5px #ff6347; 
+         
+              }
+              
 
-.success {
+.fi.error  textarea{
+    
+         border:solid 0.5px #ff6347; 
+              
+                   }
+.fi.error  select{
+    
+                    border:solid 0.5px #ff6347; 
+                         
+                              }
+.fi.error input:focus{
+    
+            
+              box-shadow: 0px 0px 0px 4px rgb(255, 0, 0,0.3);
+                   }
+                                     
+.fi.error textarea:focus{
+    
+            
+     box-shadow: 0px 0px 0px 4px rgb(255, 0, 0,0.3);
+          }
+
+.fi.error input[name='gender']:focus{
+    
+            
+ box-shadow: 0px 0px 0px 4px rgb(255, 0, 0,0.3);
+                    }
+ 
+.fi .sucess{ 
+         color: green; 
+          font-size: 13px;}
+.fi.success input{
+    
+     border:solid 0.5px lightgreen; 
          }
+ .fi.success textarea{
+    
+          border:solid  0.5px lightgreen; 
+              }        
+.fi.success select{
+    
+               border:solid 0.5px  lightgreen; 
+                   } 
 
+.fi.success input:focus{
+    
+          box-shadow: 0px 0px 0px 4px rgb(0, 255, 0, 0.3); 
+              }
+        
+.fi.success textarea:focus{
+    
+               box-shadow: 0px 0px 0px 4px rgb(0, 255, 0, 0.3); 
+                   }
+.fi.success input[name='gender']{
+                       
+                       border:solid 0.5px #f4f0ec ;
+                        }                  
+             
+        
+.btn-primary:hover {
+          
+          
+          background-color: green; /* Change to your desired hover background color */
+          border-color: #204d74; /* Change to your desired hover border color */
+      }
