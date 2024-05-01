@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const inputs = form.querySelectorAll("#username,#phonenumber,#link,#email,#textarea1,#firstname,#Dateofbirth,#lang,#nation,#height,#weight,#religion,#caste,#skills           ");
   const genderInputs = form.querySelectorAll("input[name='gender']");
   const statusSelect = form.querySelector("#floatingSelect");
+  const statusSelect2 = form.querySelector("#floatingSelect2");
+  const statusSelect3 = form.querySelector("#floatingSelect3");
+  
 
 
   function checkRequired(inputs) {
@@ -44,33 +47,40 @@ function checkGender() {
     successMessage(genderInputs[0].parentElement);
   }
 }
-
-function checkStatus() {
-  const values = statusSelect.value;
-  if (values === "0") {
-    const color = document.getElementById('floatingSelect');
-    color.style.borderColor = '#ff6347';
-    color.addEventListener('focus', function() {
-   
-      color.style.boxShadow = '0px 0px 0px 4px rgb(255, 0, 0, 0.3)'; 
-  });
-  color.addEventListener('blur', function() {
-    
-    color.style.boxShadow = '';});
-    errorMessage(statusSelect.parentElement, "Please select your status");
+function checkSelection(){
+function checkSelect(selectElement, errorMessageText) {
+  const value = selectElement.value;
+  if (value === "0") {
+    selectElement.style.borderColor = '#ff6347';
+    selectElement.addEventListener('focus', function() {
+      selectElement.style.boxShadow = '0px 0px 0px 4px rgba(255, 0, 0, 0.3)';
+    });
+    selectElement.addEventListener('blur', function() {
+      selectElement.style.boxShadow = '';
+    });
+    errorMessage(selectElement.parentElement, errorMessageText);
   } else {
-    const color = document.getElementById('floatingSelect');
-    color.style.borderColor = 'lightgreen';
-    color.addEventListener('focus', function() {
-   
-      color.style.boxShadow = '0px 0px 0px 4px rgb(0, 255, 0, 0.3)'; 
-  });
-  color.addEventListener('blur', function() {
-    
-    color.style.boxShadow = '';});
-    successMessage(statusSelect.parentElement);
+    selectElement.style.borderColor = 'lightgreen';
+    selectElement.addEventListener('focus', function() {
+      selectElement.style.boxShadow = '0px 0px 0px 4px rgba(0, 255, 0, 0.3)';
+    });
+    selectElement.addEventListener('blur', function() {
+      selectElement.style.boxShadow = '';
+    });
+    successMessage(selectElement.parentElement);
   }
 }
+checkSelect(statusSelect3, "Please select your Experience");
+checkSelect(statusSelect2, "Please select your Qualification");
+checkSelect(statusSelect, "Please select your status");
+
+// Call the function for the second select element
+
+
+
+}
+
+
 function checkAgreement() {
   const checkbox = document.querySelector("#mycheck");
   errorMessage(checkbox.parentElement, "You must agree to the terms.");
@@ -114,11 +124,11 @@ function checkAgreement() {
 
   form.addEventListener("submit", function(event) {
     
-    checkRequired(inputs);
-    checkGender();
-    checkStatus();
-    checkAgreement();
-    if (!checkRequired(inputs) || !checkGender() || !checkStatus() || checkAgreement() ){
+    // checkRequired(inputs);
+    // checkGender();
+    // checkStatus();
+    // checkAgreement();
+    if (!checkGender() && !checkRequired(inputs) && !checkSelection() && !checkAgreement()){
       event.preventDefault();
       console.log("Form submission is prevented");
     }
