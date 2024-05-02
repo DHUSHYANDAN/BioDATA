@@ -10,27 +10,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   function checkRequired(inputs) {
+    let allValid = true;
     inputs.forEach((input) => {
       const value = input.value.trim();
       if (value === "") {
         errorMessage(input, `Please enter your ${getName(input)}`);
+        allValid = false;
       }
       else if (input === username && !validateName(value)) {  
         errorMessage(input, "Please enter a valid  Name ");
+        allValid = false;
       } 
       else if (input === phonenumber && !isValidPhoneNumber(value)) {  
         errorMessage(input, "Please enter a valid  number ");
+        allValid = false;
       } 
       else if (input === email && !isValidEmail(value)) {  
         errorMessage(input, "Please enter a valid  Email or Gmail ");
+        allValid = false;
       } 
       else if (input === link && !validateURL(value)) {  
         errorMessage(input, "Please enter a valid  URL ");
+        allValid = false;
       } 
       else {
         successMessage(input);
       }
     });
+    return allValid;
   }
  
 // Function to check if gender has been selected
@@ -43,42 +50,49 @@ function checkGender() {
   });
   if (!genderSelected) {
     errorMessage(genderInputs[0].parentElement, "Please select your gender");
+    return false; 
   } else {
     successMessage(genderInputs[0].parentElement);
+    return true; 
   }
 }
-function checkSelection(){
-function checkSelect(selectElement, errorMessageText) {
-  const value = selectElement.value;
-  if (value === "0") {
-    selectElement.style.borderColor = '#ff6347';
-    selectElement.addEventListener('focus', function() {
-      selectElement.style.boxShadow = '0px 0px 0px 4px rgba(255, 0, 0, 0.3)';
-    });
-    selectElement.addEventListener('blur', function() {
-      selectElement.style.boxShadow = '';
-    });
-    errorMessage(selectElement.parentElement, errorMessageText);
-  } else {
-    selectElement.style.borderColor = 'lightgreen';
-    selectElement.addEventListener('focus', function() {
-      selectElement.style.boxShadow = '0px 0px 0px 4px rgba(0, 255, 0, 0.3)';
-    });
-    selectElement.addEventListener('blur', function() {
-      selectElement.style.boxShadow = '';
-    });
-    successMessage(selectElement.parentElement);
-  }
+function checkSelection() {
+  const selectElements = [
+    { element: statusSelect3, errorMessage: "Please select your Experience" },
+    { element: statusSelect2, errorMessage: "Please select your Qualification" },
+    { element: statusSelect, errorMessage: "Please select your status" }
+  ];
+
+  let allValid = true; 
+
+  selectElements.forEach((select) => {
+    const value = select.element.value;
+    if (value === "0") {
+      select.element.style.borderColor = '#ff6347';
+      select.element.addEventListener('focus', function() {
+        select.element.style.boxShadow = '0px 0px 0px 4px rgba(255, 0, 0, 0.3)';
+      });
+      select.element.addEventListener('blur', function() {
+        select.element.style.boxShadow = '';
+      });
+      errorMessage(select.element.parentElement, select.errorMessage);
+      allValid = false; 
+    } else {
+      select.element.style.borderColor = 'lightgreen';
+      select.element.addEventListener('focus', function() {
+        select.element.style.boxShadow = '0px 0px 0px 4px rgba(0, 255, 0, 0.3)';
+      });
+      select.element.addEventListener('blur', function() {
+        select.element.style.boxShadow = '';
+      });
+      successMessage(select.element.parentElement);
+    }
+  });
+
+  return allValid; // Return allValid after checking all selections
 }
-checkSelect(statusSelect3, "Please select your Experience");
-checkSelect(statusSelect2, "Please select your Qualification");
-checkSelect(statusSelect, "Please select your status");
-
-// Call the function for the second select element
 
 
-
-}
 
 
 function checkAgreement() {
@@ -87,11 +101,11 @@ function checkAgreement() {
   if (!checkbox.checked) {
     const checkbox = document.querySelector("#mycheck");
     checkbox.style.borderColor = '#ff6347';
-   
+    return false;
   } else {
     successMessage(checkbox.parentElement);
     checkbox.style.borderColor = 'lightgreen';
-    
+    return true;
     
   }
 }
@@ -101,8 +115,6 @@ function checkAgreement() {
   function getName(input) {
     return input.getAttribute("name");
   }
-
-  
 
   function errorMessage(input, message) {
     const field = input.parentElement;
@@ -123,20 +135,23 @@ function checkAgreement() {
   }
 
   form.addEventListener("submit", function(event) {
-    
-    // checkRequired(inputs);
-    // checkGender();
-    // checkStatus();
-    // checkAgreement();
-    if (!checkGender() && !checkRequired(inputs) && !checkSelection() && !checkAgreement()){
+    // Run all validation functions
+    const isGenderValid = checkGender();
+    const isRequiredValid = checkRequired(inputs);
+    const isSelectionValid = checkSelection();
+    const isAgreementValid = checkAgreement();
+  
+    // Check if all validations pass
+    if (isGenderValid && isRequiredValid && isSelectionValid && isAgreementValid) {
+      alert("Form submitted successfully!");
+    } else {
       event.preventDefault();
-      console.log("Form submission is prevented");
+      alert("Please complete all fields before submitting the form.");
+      console.log("Form submission is prevented due to invalid input(s)");
+   
     }
   });
-
-
   //this for validating the individual properties
- 
   function validateName(name) {
       return /^[A-Za-z\s]+$/.test(name);
     }
