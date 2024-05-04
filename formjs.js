@@ -2,8 +2,9 @@
 document.addEventListener("DOMContentLoaded", function() {
   const form = document.querySelector("#form");
   const inputs = form.querySelectorAll("#username,#phonenumber,#link,#email,#textarea1,#firstname,#Dateofbirth,#lang,#nation,#height,#weight,#religion,#caste,#skills           ");
-  const genderInputs = form.querySelectorAll("input[name='gender']");
+  
   const statusSelect = form.querySelector("#floatingSelect");
+  const genderInputs = form.querySelectorAll("input[name='gender']");
   const statusSelect2 = form.querySelector("#floatingSelect2");
   const statusSelect3 = form.querySelector("#floatingSelect3");
   
