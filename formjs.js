@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
  
 // Function to check if gender has been selected
+
 function checkGender() {
   let genderSelected = false;
   genderInputs.forEach((input) => {
@@ -57,6 +58,7 @@ function checkGender() {
     return true; 
   }
 }
+
 function checkSelection() {
   const selectElements = [
     { element: statusSelect3, errorMessage: "Please select your Experience" },
@@ -134,6 +136,7 @@ function checkAgreement() {
     // const successElement = field.querySelector(".sucess");
     // successElement.textContent = "Success!";
   }
+  //for blur function
   inputs.forEach(input => {
     input.addEventListener("blur", () => {
         checkRequiredAndSelection(inputs);
@@ -148,10 +151,15 @@ inputs.forEach(input => {
 function checkRequiredAndSelection(inputs) {
     checkRequired(inputs);
     checkSelection();
-}
+    checkGender();
+}//for selection 
 statusSelect.addEventListener("blur",  checkSelection);
    statusSelect3.addEventListener("blur",  checkSelection);
    statusSelect2.addEventListener("blur",  checkSelection);
+   //for blur checkGender
+   genderInputs.forEach((input) => {
+    input.addEventListener('blur', checkGender);
+  });
 
   form.addEventListener("submit", function(event) {
     // Run all validation functions
