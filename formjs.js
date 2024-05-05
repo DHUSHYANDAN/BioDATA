@@ -134,6 +134,24 @@ function checkAgreement() {
     // const successElement = field.querySelector(".sucess");
     // successElement.textContent = "Success!";
   }
+  inputs.forEach(input => {
+    input.addEventListener("blur", () => {
+        checkRequiredAndSelection(inputs);
+    });
+});
+inputs.forEach(input => {
+  input.addEventListener("keypress", () => {
+      checkRequiredAndSelection(inputs);
+  });
+});
+
+function checkRequiredAndSelection(inputs) {
+    checkRequired(inputs);
+    checkSelection();
+}
+statusSelect.addEventListener("blur",  checkSelection);
+   statusSelect3.addEventListener("blur",  checkSelection);
+   statusSelect2.addEventListener("blur",  checkSelection);
 
   form.addEventListener("submit", function(event) {
     // Run all validation functions
