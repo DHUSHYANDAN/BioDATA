@@ -142,11 +142,7 @@ function checkAgreement() {
         checkRequiredAndSelection(inputs);
     });
 });
-inputs.forEach(input => {
-  input.addEventListener("keypress", () => {
-      checkRequiredAndSelection(inputs);
-  });
-});
+
 
 function checkRequiredAndSelection(inputs) {
     checkRequired(inputs);
