@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
     return allValid;
   }
  
-// Function to check if gender has been selected
+
 
 function checkGender() {
   let genderSelected = false;
@@ -92,7 +92,7 @@ function checkSelection() {
     }
   });
 
-  return allValid; // Return allValid after checking all selections
+  return allValid; 
 }
 
 
@@ -114,7 +114,7 @@ function checkAgreement() {
 }
 
 
-// this for geting the elements by it attribute name
+
   function getName(input) {
     return input.getAttribute("name");
   }
@@ -152,19 +152,19 @@ function checkRequiredAndSelection(inputs) {
 statusSelect.addEventListener("blur",  checkSelection);
    statusSelect3.addEventListener("blur",  checkSelection);
    statusSelect2.addEventListener("blur",  checkSelection);
-   //for blur checkGender
+   
    genderInputs.forEach((input) => {
     input.addEventListener('blur', checkGender);
   });
 
   form.addEventListener("submit", function(event) {
-    // Run all validation functions
+    
     const isGenderValid = checkGender();
     const isRequiredValid = checkRequired(inputs);
     const isSelectionValid = checkSelection();
     const isAgreementValid = checkAgreement();
   
-    // Check if all validations pass
+    
     if (isGenderValid && isRequiredValid && isSelectionValid && isAgreementValid) {
       alert("Form submitted successfully!");
     } else {
@@ -174,7 +174,7 @@ statusSelect.addEventListener("blur",  checkSelection);
    
     }
   });
-  //this for validating the individual properties
+  
   function validateName(name) {
       return /^[A-Za-z\s]+$/.test(name);
     }
